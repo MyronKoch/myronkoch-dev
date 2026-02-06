@@ -225,10 +225,7 @@
         <header>
             <h1>Myron Koch</h1>
             <p class="title">AI Systems Architect</p>
-            <p class="bio">Former AI Director | Guest lecturer at Harvard, MIT, Princeton, Oxford, NYU, Cornell Tech</p>
-             <p class="bio">-----</p>    
-            <p class="bio">Independent researcher building agent infrastructure and helping organizations adopt AI systems. Creator of the BMCPS standard, multi-agent orchestration systems, and semantic memory architecture for agent networks.</p>
-
+            <p class="bio">Independent researcher building the tooling layer between language models and real-world infrastructure. Former AI Director. Guest lecturer at Harvard, MIT, Princeton, Cornell Tech, NYU, and Oxford.</p>
             <div class="links">
                 <a href="https://github.com/MyronKoch" target="_blank">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -250,19 +247,19 @@
             <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <a href="https://github.com/MyronKoch/longterm-memory-macos" class="project-card highlight-card" target="_blank">
-                    <h3>🧠 Longterm Memory System</h3>
-                    <p>PostgreSQL + pgvector semantic memory for Claude. Browser extension, dashboard, and cross-device sync.</p>
+                    <h3>Semantic Memory for Claude</h3>
+                    <p>Persistent memory system using PostgreSQL + pgvector. Gives Claude long-term recall across sessions with browser extension, dashboard, and cross-device sync.</p>
                     <div class="project-tags">
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">pgvector</span>
                         <span class="tag">MCP</span>
-                        <span class="tag">Embeddings</span>
+                        <span class="tag">Open Source</span>
                     </div>
                 </a>
 
-                <a href="https://github.com/MyronKoch/ai-team-orchestrator" class="project-card highlight-card" target="_blank">
-                    <h3>🤖 AI Team Orchestrator</h3>
-                    <p>Model-agnostic 6-agent tmux coordination. 33 team templates, 19 MCP tools. Works with Claude, Gemini, Codex.</p>
+                <a href="https://operationalsemantics.dev/posts/14-multi-agent-orchestration" class="project-card highlight-card" target="_blank">
+                    <h3>Multi-Agent Orchestrator</h3>
+                    <p>6-agent tmux coordination system with 33 team templates and 19 MCP tools. Model-agnostic — works with Claude, GPT, Ollama, and local models.</p>
                     <div class="project-tags">
                         <span class="tag">Multi-Agent</span>
                         <span class="tag">tmux</span>
@@ -271,68 +268,69 @@
                     </div>
                 </a>
 
-                <a href="https://bmcps.dev" class="project-card highlight-card" target="_blank">
-                    <h3>📐 BMCPS v3.0 Standard</h3>
-                    <p>The unified standard for blockchain MCP servers. 25 mandatory tools, modular architecture, compliance levels.</p>
+                <a href="https://operationalsemantics.dev/posts/11-mcp-factory-complete-story" class="project-card highlight-card" target="_blank">
+                    <h3>MCP Server Factory</h3>
+                    <p>Meta-MCP server that auto-generates standard-compliant MCP servers from a single schema definition. Produces tested, deployable servers on demand.</p>
+                    <div class="project-tags">
+                        <span class="tag">Meta-programming</span>
+                        <span class="tag">Code Generation</span>
+                        <span class="tag">MCP</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </a>
+
+                <a href="https://bmcps.dev" class="project-card" target="_blank">
+                    <h3>BMCPS v3.0 Standard</h3>
+                    <p>Open standard for consistent, safe MCP tool interfaces. 25 mandatory tools, modular architecture, 238 automated tests.</p>
                     <div class="project-tags">
                         <span class="tag">Standard</span>
                         <span class="tag">Specification</span>
-                        <span class="tag">Blockchain</span>
+                        <span class="tag">MIT Licensed</span>
                         <span class="tag">MCP</span>
                     </div>
                 </a>
 
-                <a href="https://github.com/MyronKoch/blockchain-mcp-factory" class="project-card" target="_blank">
-                    <h3>🏭 Blockchain MCP Factory</h3>
-                    <p>Meta-MCP server that generates BMCPS v3.0 compliant blockchain servers automatically.</p>
-                    <div class="project-tags">
-                        <span class="tag">Meta-programming</span>
-                        <span class="tag">BMCPS</span>
-                        <span class="tag">Code Generation</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/MyronKoch/nft-pipeline-mcp-server" class="project-card" target="_blank">
-                    <h3>🎨 NFT Pipeline Server</h3>
-                    <p>End-to-end NFT creation: AI image generation → IPFS storage → metadata → mint-ready.</p>
-                    <div class="project-tags">
-                        <span class="tag">NFT</span>
-                        <span class="tag">IPFS</span>
-                        <span class="tag">AI Art</span>
-                        <span class="tag">Pinata</span>
-                    </div>
-                </a>
-
                 <a href="https://github.com/MyronKoch/evm-chains-mcp-server" class="project-card" target="_blank">
-                    <h3>⛓️ EVM Chains Server</h3>
-                    <p>111 tools across 7 EVM chains including Ethereum, Polygon, Avalanche, and Arbitrum.</p>
+                    <h3>MCP at Scale — 111 Tools</h3>
+                    <p>Production MCP server with 111 tools across 7 networks. Demonstrates MCP patterns for complex multi-system orchestration.</p>
                     <div class="project-tags">
-                        <span class="tag">Ethereum</span>
-                        <span class="tag">Multi-chain</span>
-                        <span class="tag">DeFi</span>
+                        <span class="tag">MCP</span>
+                        <span class="tag">Multi-network</span>
+                        <span class="tag">TypeScript</span>
                         <span class="tag">111 Tools</span>
                     </div>
                 </a>
 
                 <a href="https://github.com/MyronKoch/ccxt-mcp-server" class="project-card" target="_blank">
-                    <h3>📈 CCXT MCP Server</h3>
-                    <p>Unified access to 106+ cryptocurrency exchanges with arbitrage detection.</p>
+                    <h3>Unified Financial Data MCP</h3>
+                    <p>Single MCP interface to 106+ financial data APIs with real-time cross-platform arbitrage detection.</p>
                     <div class="project-tags">
+                        <span class="tag">MCP</span>
                         <span class="tag">CCXT</span>
-                        <span class="tag">Trading</span>
-                        <span class="tag">Arbitrage</span>
-                        <span class="tag">106 Exchanges</span>
+                        <span class="tag">106+ APIs</span>
+                        <span class="tag">Real-time</span>
                     </div>
                 </a>
 
-                <a href="https://github.com/MyronKoch/xrp-testnet-mcp-server" class="project-card" target="_blank">
-                    <h3>💧 XRP Testnet Server</h3>
-                    <p>52-tool BMCPS v3.0 reference implementation with complete NFT pipeline.</p>
+                <a href="https://operationalsemantics.dev" class="project-card" target="_blank">
+                    <h3>Operational Semantics — Blog</h3>
+                    <p>45 technical posts documenting the full journey from experimental MCP development to published standard and multi-agent systems.</p>
                     <div class="project-tags">
-                        <span class="tag">XRP</span>
-                        <span class="tag">BMCPS v3.0</span>
-                        <span class="tag">52 Tools</span>
-                        <span class="tag">Reference</span>
+                        <span class="tag">Technical Writing</span>
+                        <span class="tag">45 Posts</span>
+                        <span class="tag">MCP</span>
+                        <span class="tag">Deep Dives</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/MyronKoch/academic-lectures" class="project-card" target="_blank">
+                    <h3>Academic Lecture Portfolio</h3>
+                    <p>Materials from guest lectures at Harvard, MIT, Princeton, Cornell Tech, NYU, Oxford, and Web3 Summit Amsterdam keynote.</p>
+                    <div class="project-tags">
+                        <span class="tag">Speaking</span>
+                        <span class="tag">Ivy League</span>
+                        <span class="tag">Oxford</span>
+                        <span class="tag">2024-2025</span>
                     </div>
                 </a>
             </div>
@@ -346,7 +344,7 @@
         </section>
 
         <footer>
-            <p>© 2025 Myron Koch. Building in public.</p>
+            <p>© 2026 Myron Koch</p>
         </footer>
     </div>
 </body>
