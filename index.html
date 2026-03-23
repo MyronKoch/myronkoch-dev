@@ -224,8 +224,8 @@
     <div class="container">
         <header>
             <h1>Myron Koch</h1>
-            <p class="title">AI Systems Architect</p>
-            <p class="bio">Independent researcher building the tooling layer between language models and real-world infrastructure. Former AI Director. Guest lecturer at Harvard, MIT, Princeton, Cornell Tech, NYU, and Oxford.</p>
+            <p class="title">AI Systems Architect | Prompt & Context Engineering | MCP Infrastructure</p>
+            <p class="bio">Independent researcher focused on prompt engineering, context engineering, and MCP infrastructure. Former AI Director. Guest lecturer at Harvard, MIT, Princeton, Cornell Tech, NYU, and Oxford.</p>
             <div class="links">
                 <a href="https://github.com/MyronKoch" target="_blank">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -246,6 +246,17 @@
         <section>
             <h2>Featured Projects</h2>
             <div class="projects-grid">
+                <a href="https://deadgraph.com/demo" class="project-card highlight-card" target="_blank">
+                    <h3>DeadGraph - Knowledge Graph System</h3>
+                    <p>Grateful Dead knowledge graph from 675K tracks. Cloudflare D1 database + remote MCP server + Haiku-powered chatbot with intent routing across 13 tools. Three-layer evaluation framework.</p>
+                    <div class="project-tags">
+                        <span class="tag">MCP</span>
+                        <span class="tag">Cloudflare D1</span>
+                        <span class="tag">Haiku</span>
+                        <span class="tag">Evaluation</span>
+                    </div>
+                </a>
+
                 <a href="https://github.com/MyronKoch/longterm-memory-macos" class="project-card highlight-card" target="_blank">
                     <h3>Semantic Memory for Claude</h3>
                     <p>Persistent memory system using PostgreSQL + pgvector. Gives Claude long-term recall across sessions with browser extension, dashboard, and cross-device sync.</p>
@@ -253,18 +264,17 @@
                         <span class="tag">PostgreSQL</span>
                         <span class="tag">pgvector</span>
                         <span class="tag">MCP</span>
-                        <span class="tag">Open Source</span>
                     </div>
                 </a>
 
                 <a href="https://operationalsemantics.dev/posts/14-multi-agent-orchestration" class="project-card highlight-card" target="_blank">
-                    <h3>Multi-Agent Orchestrator</h3>
-                    <p>6-agent tmux coordination system with 33 team templates and 19 MCP tools. Model-agnostic — works with Claude, GPT, Ollama, and local models.</p>
+                    <h3>Multi-Agent Orchestration</h3>
+                    <p>Two orchestration systems: 7-agent coordination via MCP + tmux, and terminal-spawned agents via OSA script with cross-machine backchannel on Cloudflare.</p>
                     <div class="project-tags">
                         <span class="tag">Multi-Agent</span>
                         <span class="tag">tmux</span>
-                        <span class="tag">33 Templates</span>
-                        <span class="tag">Model-Agnostic</span>
+                        <span class="tag">OSA Script</span>
+                        <span class="tag">Backchannel</span>
                     </div>
                 </a>
 
@@ -291,24 +301,13 @@
                 </a>
 
                 <a href="https://github.com/MyronKoch/evm-chains-mcp-server" class="project-card" target="_blank">
-                    <h3>MCP at Scale — 111 Tools</h3>
-                    <p>Production MCP server with 111 tools across 7 networks. Demonstrates MCP patterns for complex multi-system orchestration.</p>
+                    <h3>MCP at Scale - 111 Tools</h3>
+                    <p>Production MCP server with 111 tools across 7 networks. Demonstrates MCP patterns for complex multi-system orchestration at scale.</p>
                     <div class="project-tags">
                         <span class="tag">MCP</span>
-                        <span class="tag">Multi-network</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">111 Tools</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/MyronKoch/ccxt-mcp-server" class="project-card" target="_blank">
-                    <h3>Unified Financial Data MCP</h3>
-                    <p>Single MCP interface to 106+ financial data APIs with real-time cross-platform arbitrage detection.</p>
-                    <div class="project-tags">
-                        <span class="tag">MCP</span>
-                        <span class="tag">CCXT</span>
-                        <span class="tag">106+ APIs</span>
-                        <span class="tag">Real-time</span>
+                        <span class="tag">Scale</span>
                     </div>
                 </a>
 
@@ -338,8 +337,8 @@
 
         <section class="cta-section">
             <h2>Let's Build Something</h2>
-            <p>I'm exploring opportunities at AI research labs focused on agent infrastructure, tool use, and human-AI collaboration.</p>
-            <a href="mailto:myron@myronkoch.com" class="btn">Get in Touch</a>
+            <p>Prompt engineer and context engineer looking to work where it matters most. 25 years building software, the last 3 focused on AI systems.</p>
+            <a href="mailto:myron@myronkoch.dev" class="btn">Get in Touch</a>
             <a href="https://operationalsemantics.dev" class="btn btn-outline">Read the Blog</a>
         </section>
 
