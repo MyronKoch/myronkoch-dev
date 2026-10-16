@@ -93,7 +93,7 @@
         .paper .stat{color:var(--accent);font-weight:600}
 
         /* ---- PRODUCTS ---- */
-        .product-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+        .product-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
         .product{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:border-color 0.2s}
         .product:hover{border-color:var(--accent)}
         .product h3{font-size:1rem;font-weight:600;margin-bottom:4px}
@@ -250,7 +250,7 @@
             <div class="projects-grid">
                 <a href="https://deadgraph.com" class="project-card highlight" target="_blank">
                     <h3>DeadGraph</h3>
-                    <p>AI research assistant for the Grateful Dead's live history. 2,336 shows, 675,641 tracks, 13 MCP tools. Rights-aware pipeline grounded in the Internet Archive.</p>
+                    <p>Ask about any Grateful Dead show, then hear the tape. 2,250+ shows from 1965 to 1995, served over MCP to Claude and the web, with a rights-aware pipeline grounded in the Internet Archive.</p>
                     <div class="tags">
                         <span>MCP</span><span>Claude</span><span>Cloudflare D1</span><span>TypeScript</span>
                     </div>
@@ -325,7 +325,7 @@
         <section id="products">
             <p class="section-label">Peak Summit Labs</p>
             <h2 class="section-title">Shipped Products</h2>
-            <p class="section-desc">Research that ships. Every product runs locally, costs once, and respects your privacy.</p>
+            <p class="section-desc">Research that ships. The desktop apps run locally and cost once.</p>
             <div class="product-row">
                 <a href="https://pushtotranscribe.com" class="product" target="_blank">
                     <h3>Push to Transcribe</h3>
@@ -340,7 +340,12 @@
                 <a href="https://deadgraph.com" class="product" target="_blank">
                     <h3>DeadGraph</h3>
                     <div class="price">Free tier - deadgraph.com</div>
-                    <p>AI research assistant for the Grateful Dead's live history. Ask any question about 2,336 shows in plain English. 13 MCP tools. Grounded in the Internet Archive.</p>
+                    <p>Ask about any Grateful Dead show in plain English, then hear the tape. 2,250+ shows, streamed from the Internet Archive. Web, iPhone and an MCP server.</p>
+                </a>
+                <a href="https://peakpocketai.com" class="product" target="_blank">
+                    <h3>Peak Pocket AI</h3>
+                    <div class="price">Free - iPhone</div>
+                    <p>Run and benchmark open language models on-device (llama.cpp via llama.rn). Protocols for speed, heat and battery, and answer trust; a blind arena and parameter sweeps.</p>
                 </a>
             </div>
         </section>
