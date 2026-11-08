@@ -131,6 +131,7 @@ h1,h2,.hero h1,.section-title{font-family:'Cinzel','Trajan Pro',Georgia,serif;le
 h3,.nav,.nav a,.hero .subtitle,.hero .links a,.btn,.btn-outline,.cred-label,.section-label,.project-card .tags,.project-card .tag,.paper .meta,.paper .stat,footer{font-family:'Josefin Sans','Avenir Next','Segoe UI',system-ui,sans-serif}
 code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace}
 </style>
+<script>(function(){try{var m=localStorage.getItem('theme');if(m!=='light'&&m!=='dark')m='system';if(m==='light'||(m==='system'&&!matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','light');}catch(e){}})();</script>
 </head>
 <body>
     <div class="nav">
@@ -384,24 +385,27 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
     </div>
 
     <script>
-        function toggleTheme(){
-            const html=document.documentElement;
-            const current=html.getAttribute('data-theme');
-            const next=current==='light'?null:'light';
-            if(next)html.setAttribute('data-theme',next);
-            else html.removeAttribute('data-theme');
-            document.getElementById('themeIcon').innerHTML=next?'&#9728;':'&#9790;';
-            localStorage.setItem('theme',next||'dark');
+        // Theme: System (follows the device) -> Light -> Dark. Dark is the stylesheet default;
+        // light is data-theme="light". Applied early in <head> too, so the page never flashes.
+        const THEME_MODES=['system','light','dark'];
+        const THEME_ICONS={system:'&#9680;',light:'&#9728;',dark:'&#9790;'};
+        const darkQuery=window.matchMedia('(prefers-color-scheme: dark)');
+        function themeMode(){const m=localStorage.getItem('theme');return THEME_MODES.includes(m)?m:'system';}
+        function applyTheme(mode){
+            const light=mode==='light'||(mode==='system'&&!darkQuery.matches);
+            if(light)document.documentElement.setAttribute('data-theme','light');
+            else document.documentElement.removeAttribute('data-theme');
+            const icon=document.getElementById('themeIcon');
+            if(icon)icon.innerHTML=THEME_ICONS[mode];
+            const btn=document.querySelector('.theme-toggle');
+            if(btn){const label='Theme: '+mode[0].toUpperCase()+mode.slice(1)+' (click to change)';btn.setAttribute('aria-label',label);btn.title=label;}
         }
-        (function(){
-            const saved=localStorage.getItem('theme');
-            if(saved==='light'){
-                document.documentElement.setAttribute('data-theme','light');
-                document.addEventListener('DOMContentLoaded',function(){
-                    document.getElementById('themeIcon').innerHTML='&#9728;';
-                });
-            }
-        })();
+        function toggleTheme(){
+            const next=THEME_MODES[(THEME_MODES.indexOf(themeMode())+1)%THEME_MODES.length];
+            localStorage.setItem('theme',next);applyTheme(next);
+        }
+        darkQuery.addEventListener('change',function(){if(themeMode()==='system')applyTheme('system');});
+        applyTheme(themeMode());
     </script>
 </body>
 </html>
