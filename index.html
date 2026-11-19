@@ -104,6 +104,7 @@
         .product h3{font-size:1rem;font-weight:600;margin-bottom:4px}
         .product .price{font-size:0.8rem;color:var(--accent);font-weight:600;margin-bottom:8px}
         .product p{font-size:0.85rem;color:var(--text2);line-height:1.5}
+        .product p.footnote{margin-top:10px;font-style:italic;font-size:0.8rem;color:var(--text3)}
 
         /* ---- CTA ---- */
         .cta{text-align:center;padding:48px 32px;background:var(--bg2);border-radius:16px;border:1px solid var(--border);margin-bottom:48px}
@@ -178,12 +179,8 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
         <div class="cred-bar">
             <div class="cred-grid">
                 <div class="cred-item">
-                    <div class="cred-number">6</div>
-                    <div class="cred-label">Universities incl. Oxford</div>
-                </div>
-                <div class="cred-item">
-                    <div class="cred-number">50+</div>
-                    <div class="cred-label">Technical Posts</div>
+                    <div class="cred-number">8</div>
+                    <div class="cred-label">Guest Lectures</div>
                 </div>
                 <div class="cred-item">
                     <div class="cred-number">4</div>
@@ -193,6 +190,10 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
                     <div class="cred-number">15</div>
                     <div class="cred-label">Merged OSS PRs</div>
                 </div>
+                <div class="cred-item">
+                    <div class="cred-number">5</div>
+                    <div class="cred-label">Shipped Apps</div>
+                </div>
             </div>
         </div>
 
@@ -200,7 +201,7 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
         <section id="research">
             <p class="section-label">Guest Lectures</p>
             <h2 class="section-title">The Campus Lecture Tour, 2024-2025</h2>
-            <p class="section-desc">Eight guest lectures to university engineering and blockchain societies at Harvard (twice), MIT, Princeton, Cornell Tech, NYU, and Oxford, on AI systems, agent orchestration, and MCP infrastructure, plus a keynote at Web3 Summit Amsterdam.</p>
+            <p class="section-desc">Eight guest lectures to university engineering and blockchain societies at Harvard (twice), MIT, Princeton, Cornell Tech, NYU, and Oxford, on AI systems, agent orchestration, MCP infrastructure, and AI safety and red-teaming, plus a keynote at Web3 Summit Amsterdam.</p>
             <div class="lecture-grid">
                 <div class="lecture-card">
                     <div class="lecture-name">Harvard</div>
@@ -268,11 +269,20 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
             <div class="projects-grid">
                 <a href="https://deadgraph.com" class="project-card highlight" target="_blank">
                     <h3>DeadGraph</h3>
-                    <p>Ask about any Grateful Dead show, then hear the tape. 2,250+ shows from 1965 to 1995, served over MCP to Claude and the web, with a rights-aware pipeline grounded in the Internet Archive.</p>
+                    <p>Ask about 2,250+ Grateful Dead shows, then hear the tape. Shows from 1965 to 1995, served over MCP to Claude and the web, with a rights-aware pipeline grounded in the Internet Archive.</p>
                     <div class="tags">
                         <span class="tag">MCP</span><span class="tag">Claude</span><span class="tag">Cloudflare D1</span><span class="tag">TypeScript</span>
                     </div>
                 </a>
+                <div class="project-card highlight">
+                    <h3>Red-Teaming and Refusal Research</h3>
+                    <p>Red-teaming open-weight models to test how well their safety training holds across standard harm categories, and measuring the refusal direction: where a model encodes the decision to refuse, and how far that decision moves.</p>
+                    <div class="tags">
+                        <span class="tag">Red-teaming</span>
+                        <span class="tag">AI Safety</span>
+                        <span class="tag">Measurement</span>
+                    </div>
+                </div>
                 <a href="https://github.com/rxhanson/Rectangle/pulls?q=is%3Apr+author%3AMyronKoch+is%3Amerged" class="project-card highlight" target="_blank">
                     <h3>Rectangle Contributor</h3>
                     <p>Nine merged pull requests to Rectangle, the 30K-star macOS window manager: ninths, twelfths and sixteenths grid positions with a cycling mode, overlap offset for grid cycling, and an opt-in badge and switcher for stacked windows with keyboard navigation. The switcher's alphabetical window list shipped in Rectangle 2.0.4.</p>
@@ -309,40 +319,22 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
                         <span class="tag">Backchannel</span>
                     </div>
                 </a>
-                <a href="https://bmcps.dev" class="project-card" target="_blank">
-                    <h3>BMCPS v3.0 Standard</h3>
-                    <p>A 2025 specification for consistent MCP tool interfaces in blockchain servers. 25 required tools, 238 automated tests. Frozen as a reference; MIT licensed, source on GitHub.</p>
-                    <div class="tags">
-                        <span class="tag">Standard</span>
-                        <span class="tag">238 Tests</span>
-                        <span class="tag">Frozen</span>
-                    </div>
-                </a>
-                <a href="https://operationalsemantics.dev/posts/11-mcp-factory-complete-story.md/" class="project-card" target="_blank">
-                    <h3>MCP Server Factory</h3>
-                    <p>A meta-MCP server for BMCPS: it scores blockchain MCP servers against the standard and packages them as MCPB bundles. Its code generator was an experiment, frozen unfinished.</p>
-                    <div class="tags">
-                        <span class="tag">MCP</span>
-                        <span class="tag">Validation</span>
-                        <span class="tag">Frozen</span>
-                    </div>
-                </a>
-                <a href="https://github.com/MyronKoch/evm-chains-mcp-server" class="project-card" target="_blank">
-                    <h3>EVM Chains - 111 Tools</h3>
-                    <p>Production MCP server with 111 tools across 7 blockchain networks. Wallet management, token ops, DeFi, NFTs, staking, analytics.</p>
-                    <div class="tags">
-                        <span class="tag">111 Tools</span>
-                        <span class="tag">7 Networks</span>
-                        <span class="tag">Production</span>
-                    </div>
-                </a>
                 <a href="https://operationalsemantics.dev" class="project-card" target="_blank">
                     <h3>Operational Semantics</h3>
-                    <p>50+ technical posts. The full journey from MCP experiments to published standard and multi-agent systems. Includes the 8-part lecture series.</p>
+                    <p>50+ technical posts. The full journey from MCP experiments to a specification and multi-agent systems. Includes the 8-part lecture series.</p>
                     <div class="tags">
                         <span class="tag">50+ Posts</span>
                         <span class="tag">Technical Writing</span>
                         <span class="tag">Deep Dives</span>
+                    </div>
+                </a>
+                <a href="https://bmcps.dev" class="project-card" target="_blank">
+                    <h3>Blockchain MCP Servers (2025)</h3>
+                    <p>BMCPS, a specification for consistent MCP tool interfaces in blockchain servers (25 required tools, 238 automated tests); EVM Chains, an MCP server with 111 tools across 7 networks; and MCP Server Factory, which scored servers against the spec. Kept as a reference; MIT licensed.</p>
+                    <div class="tags">
+                        <span class="tag">Specification</span>
+                        <span class="tag">238 Tests</span>
+                        <span class="tag">111 Tools</span>
                     </div>
                 </a>
             </div>
@@ -367,12 +359,18 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
                 <a href="https://deadgraph.com" class="product" target="_blank">
                     <h3>DeadGraph</h3>
                     <div class="price">Free tier - deadgraph.com</div>
-                    <p>Ask about any Grateful Dead show in plain English, then hear the tape. 2,250+ shows, streamed from the Internet Archive. Web, iPhone, Android and an MCP server.</p>
+                    <p>Ask about 2,250+ Grateful Dead shows in plain English, then hear the tape, streamed from the Internet Archive. Web, iPhone, Android and an MCP server.</p>
                 </a>
                 <a href="https://peakpocketai.com" class="product" target="_blank">
                     <h3>Peak Pocket AI</h3>
                     <div class="price">Free - iPhone</div>
                     <p>Run and benchmark open language models on-device (llama.cpp via llama.rn). Protocols for speed, heat and battery, and answer trust; a blind arena and parameter sweeps.</p>
+                </a>
+                <a href="https://peaksummitlabs.com/jans-recipes/" class="product" target="_blank">
+                    <h3>Jan's Recipe Box</h3>
+                    <div class="price">Free - Mac App Store + Chrome</div>
+                    <p>Every recipe in one box, with a Chrome button that clips a recipe from any website. No account needed; sync through your own Google Drive if you want it everywhere. iPhone and iPad are in Apple review.</p>
+                    <p class="footnote">* Jan is my mom. This was her 82nd birthday present. Most people bring a cake. I brought a database, a Chrome extension and a trip through Apple review. The cake would have been easier.</p>
                 </a>
             </div>
         </section>
@@ -380,7 +378,7 @@ code,pre,kbd,samp{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,mono
         <!-- CTA -->
         <section class="cta">
             <h2>One person. Full stack. AI-augmented.</h2>
-            <p>Twenty-two years running cross-functional production teams and building the software they ran on. The last three focused entirely on AI systems. I ship what teams can't - solo, using the harness I built and the agents it runs.</p>
+            <p>Twenty-two years running cross-functional production teams and building the software they ran on. The last three focused entirely on AI systems. The work here is built and tested with the agent harness I run every day.</p>
             <a href="mailto:myron@myronkoch.dev" class="btn">Get in Touch</a>
             <a href="https://operationalsemantics.dev" class="btn btn-outline">Read the Blog</a>
         </section>
